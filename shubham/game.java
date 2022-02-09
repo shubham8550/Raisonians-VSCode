@@ -9,18 +9,19 @@ public class game {
 
     static ArrayList<String> players = new ArrayList<String>();
 
-    boolean jump(String player) {
-        int ind = game.players.indexOf(players);
-        if (player.charAt(0) == 'L') {
-            if (ind + 2 <= 8) {
-                if (game.players.get(ind + 2).equals("0") || game.players.get(ind + 2).charAt(0) == 'R') {
-                    Collections.swap(game.players, ind, ind + 2);
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
+    // boolean jump(String player) {
+    // int ind = game.players.indexOf(players);
+    // if (player.charAt(0) == 'L') {
+    // if (ind + 2 <= 8) {
+    // if (game.players.get(ind + 2).equals("0") || game.players.get(ind +
+    // 2).charAt(0) == 'R') {
+    // Collections.swap(game.players, ind, ind + 2);
+    // return true;
+    // }
+    // }
+    // }
+    // return false;
+    // }
 
     public static void main(String args[]) {
         game.players.add("L1");
