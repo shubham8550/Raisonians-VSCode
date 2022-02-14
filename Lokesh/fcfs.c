@@ -4,10 +4,8 @@
 
 void findWaitingTime(int processes[], int n, int bt[], int wt[])
 {
-	// waiting time for first process is 0
 	wt[0] = 0;
 
-	// calculating waiting time
 	for (int i = 1; i < n ; i++ )
 		wt[i] = bt[i-1] + wt[i-1];
 
@@ -17,7 +15,6 @@ void findWaitingTime(int processes[], int n, int bt[], int wt[])
 
 void findTurnAroundTime( int processes[], int n, int bt[], int wt[], int tat[])
 {
-  	// calculating turnaround time (completion time of process) by adding bt[i] + wt[i]
 	for (int i = 0; i < n ; i++)
 		tat[i] = bt[i] + wt[i];
 }
@@ -32,7 +29,6 @@ void findavgTime( int processes[], int n, int bt[])
 
 	printf("Prss BT\tWT\tTAT\n");
 
-	// Calculate total waiting time and total turn around time
 	for (int i=0; i<n; i++)
 	{
 		total_wt = total_wt + wt[i];
@@ -51,14 +47,14 @@ void findavgTime( int processes[], int n, int bt[])
 
 int main()
 {
-	//process id's
+
 	int processes[] = {1, 2, 3};
 
     // To find total number of processes 
 	int n = sizeof processes / sizeof processes[0];
 
     printf("process = %ld process[0] = %ld \n", sizeof processes, sizeof processes[0]);
-	//Burst time of all processes
+	
 	int burst_time[] = {10, 5, 8};
 
 	findavgTime(processes, n, burst_time);
