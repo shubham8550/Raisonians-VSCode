@@ -34,3 +34,4 @@ int main(){
 
 //to compile   use  :   gcc filename.c -o output
 //to run             :  ./output
+//
