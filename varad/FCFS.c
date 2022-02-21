@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<conio.h>
+
 
 void findWaitingTime(int processes[] , int n , int b_time[] ,int w_time[])
 {
@@ -39,7 +39,7 @@ void findavgTime(int processes[] , int n , int b_time[])
 }
 int main()
 {
-        clrscr();
+        
         int processes[] = {4,5,6,7,8};
         int n = sizeof processes / sizeof processes[0];          // size of processes
 

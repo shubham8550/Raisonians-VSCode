@@ -1,3 +1,4 @@
+# Note : #non preemptive  (ignores priority)
 def findWaitingTime(processes, n, bt, wt):
 
 	wt[0] = 0

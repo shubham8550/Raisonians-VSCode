@@ -1,7 +1,6 @@
 // C program for implementation of FCFS scheduling
 #include<stdio.h>
 
-
 void findWaitingTime(int processes[], int n, int bt[], int wt[])
 {
 	wt[0] = 0;
@@ -13,11 +12,11 @@ void findWaitingTime(int processes[], int n, int bt[], int wt[])
 }
 
 
-void findTurnAroundTime( int processes[], int n, int bt[], int wt[], int tat[])
-{
-	for (int i = 0; i < n ; i++)
-		tat[i] = bt[i] + wt[i];
-}
+// void findTurnAroundTime( int processes[], int n, int bt[], int wt[], int tat[])
+// {
+// 	for (int i = 0; i < n ; i++)
+// 		tat[i] = bt[i] + wt[i];
+// }
 
 void findavgTime( int processes[], int n, int bt[])
 {
@@ -25,9 +24,10 @@ void findavgTime( int processes[], int n, int bt[])
 
 	findWaitingTime(processes, n, bt, wt);
 
-	findTurnAroundTime(processes, n, bt, wt, tat);
+	// findTurnAroundTime(processes, n, bt, wt, tat);
 
-	printf("Prss BT\tWT\tTAT\n");
+	// printf("Prss BT\tWT\tTAT\n");
+	printf("Prss BT\tWT\n");
 
 	for (int i=0; i<n; i++)
 	{
@@ -35,19 +35,19 @@ void findavgTime( int processes[], int n, int bt[])
 		total_tat = total_tat + tat[i];
 		printf(" %d ",(i+1));
 		printf("\t%d ", bt[i] );
-		printf("\t%d",wt[i] );
-		printf("\t%d\n",tat[i] );
+		printf("\t%d\n",wt[i] );
+		// printf("\t%d\n",tat[i] );
 	}
+
 	int s=(float)total_wt / (float)n;
-	int t=(float)total_tat / (float)n;
+	// int t=(float)total_tat / (float)n;
 	printf("Average waiting time = %d",s);
 	printf("\n");
-	printf("Average turn around time = %d ",t);
+	// printf("Average turn around time = %d ",t);
 }
 
 int main()
 {
-
 	int processes[] = {1, 2, 3};
 
     // To find total number of processes 
