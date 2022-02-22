@@ -1,0 +1,6 @@
+{
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "code-runner.fileDirectoryAsCwd": true,
+    "code-runner.clearPreviousOutput": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
