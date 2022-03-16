@@ -1,52 +1,66 @@
-#include<stdio.h>
-
-
-void findWaitingTime(int processes[] , int n , int b_time[] ,int w_time[])
+void findWaitingTime(int processes[], int n, 
+                          int bt[], int wt[])
 {
-        w_time[0] = 0;
-
-        for(int i=1;i<n;i++)
-                w_time[i]=b_time[i-1]+w_time[i+1];
+    // waiting time for first process is 0
+    wt[0] = 0;
+   
+    // calculating waiting time
+    for (int  i = 1; i < n ; i++ )
+        wt[i] =  bt[i-1] + wt[i-1] ;
 }
-
-void findTurnAroundTime(int processes[] , int n , int b_time[] , int w_time[], int t_at[])
+   
+// Function to calculate turn around time
+void findTurnAroundTime( int processes[], int n, 
+                  int bt[], int wt[], int tat[])
 {
-        for(int i=1;i<n;i++)
-                t_at[i] = b_time[i]+ w_time[i];
+    // calculating turnaround time by adding
+    // bt[i] + wt[i]
+    for (int  i = 0; i < n ; i++)
+        tat[i] = bt[i] + wt[i];
 }
-
-void findavgTime(int processes[] , int n , int b_time[])
+   
+//Function to calculate average time
+void findavgTime( int processes[], int n, int bt[])
 {
-        int w_time[n], t_at[n], total_w_time = 0, total_t_at = 0;
-        findWaitingTime(processes , n ,b_time ,w_time);
-        findTurnAroundTime(processes ,n ,b_time ,w_time, t_at);
-
-
-        for(int i=0 ;i<n ;i++)
-        {
-                total_w_time = total_w_time + w_time[i];
-		total_t_at = total_t_at + t_at[i];
-		printf(" %d ",(i+1));
-		printf("\t%d ", b_time[i]);
-		printf("\t%d",  w_time[i]);
-		printf("\t%d\n", t_at[i]);
-	}
-	        int s=(float)total_w_time / (float)n;
-	        int t=(float)total_t_at / (float)n;
-	        printf("Average waiting time = %d",s);
-	        printf("\n");
-	        printf("Average turn around time = %d ",t);
+    int wt[n], tat[n], total_wt = 0, total_tat = 0;
+   
+    //Function to find waiting time of all processes
+    findWaitingTime(processes, n, bt, wt);
+   
+    //Function to find turn around time for all processes
+    findTurnAroundTime(processes, n, bt, wt, tat);
+   
+    //Display processes along with all details
+    printf("Processes   Burst time   Waiting time   Turn around time\n");
+   
+    // Calculate total waiting time and total turn 
+    // around time
+    for (int  i=0; i<n; i++)
+    {
+        total_wt = total_wt + wt[i];
+        total_tat = total_tat + tat[i];
+        printf("   %d ",(i+1));
+        printf("       %d ", bt[i] );
+        printf("       %d",wt[i] );
+        printf("       %d\n",tat[i] );
+    }
+    int s=(float)total_wt / (float)n;
+    int t=(float)total_tat / (float)n;
+    printf("Average waiting time = %d",s);
+    printf("\n");
+    printf("Average turn around time = %d ",t);
 }
+   
+// Driver code
 int main()
 {
-        
-        int processes[] = {4,5,6,7,8};
-        int n = sizeof processes / sizeof processes[0];          // size of processes
-
-        printf("Processes is %ld", sizeof processes[0]);
-
-        int b_time[] = {5,10,3,7,2};
-
-        findavgTime(processes ,n ,b_time);
-        return 0;
+    //process id's
+    int processes[] = { 1, 2, 3,4};
+    int n = sizeof processes / sizeof processes[0];
+   
+    //Burst time of all processes
+    int  burst_time[] = {8, 4, 6,2};
+   
+    findavgTime(processes, n,  burst_time);
+    return 0;
 }

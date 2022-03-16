@@ -26,8 +26,8 @@ void findavgTime( int processes[], int n, int bt[])
 
 	findTurnAroundTime(processes, n, bt, wt, tat);
 
-	printf("Prss\t BT\t\tWT\t\tTAT\n");
-	// printf("Prss BT\tWT\t");
+	printf("Press BT\tWT\tTAT\n");
+	printf("Press BT\tWT\n");
 
 	for (int i=0; i<n; i++)
 	{
@@ -35,7 +35,7 @@ void findavgTime( int processes[], int n, int bt[])
 		total_tat = total_tat + tat[i];
 		printf(" %d ",(i+1));
 		printf("\t%d ", bt[i] );
-		printf("\t%d",wt[i] );
+		printf("\t%d\n",wt[i] );
 		printf("\t%d\n",tat[i] );
 	}
 
@@ -48,7 +48,7 @@ void findavgTime( int processes[], int n, int bt[])
 
 int main()
 {
-	int processes[] = {0, 1, 2, 3};
+	int processes[] = {1, 2, 3, 4};
 
     // To find total number of processes 
 	int n = sizeof processes / sizeof processes[0];

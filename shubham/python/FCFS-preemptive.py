@@ -13,7 +13,7 @@ def findavgWaitTime(waiting_time,n):
 if __name__ =="__main__":
     arrival_time = [0,1,2, 3]
     n = len(arrival_time)
-    burst_time = [5,3,8,7]
+    burst_time = [8,4,6,2]
 
     
     #print(n)
