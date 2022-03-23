@@ -1,4 +1,3 @@
-// C program for the above approach
 #include <stdio.h>
 #include <string.h>
 
@@ -53,14 +52,14 @@ void bitStuffing(int N, int arr[])
 
 	// Print Answer
 	for (i = 0; i < j; i++)
-		printf("%d", brr[i]);
+		printf("%d\n", brr[i]);
 }
 
 // Driver Code
 int main()
 {
 	int N = 6;
-	int arr[] = { 1, 1, 1, 1, 1, 1 };
+	int arr[] = { 1, 1, 1, 1, 1, 1, 1, 1 };
 
 	bitStuffing(N, arr);
 
