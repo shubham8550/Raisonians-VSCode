@@ -30,3 +30,12 @@ Exception in thread "pool-3-thread-1" java.util.NoSuchElementException: next on 
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
 2022.03.10 01:45:00 INFO  shutting down Metals
+2022.03.28 19:15:02 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/ubuntu/Raisonians/.metals/lsp.trace.json or /root/.cache/metals/lsp.trace.json
+2022.03.28 19:15:02 INFO  logging to file /home/ubuntu/Raisonians/.metals/metals.log
+2022.03.28 19:15:02 INFO  Started: Metals version 0.11.2 in workspace '/home/ubuntu/Raisonians' for client code-server 1.63.0.
+2022.03.28 19:15:02 INFO  Parse release: 17.0.2
+2022.03.28 19:15:02 WARN  Can't instantiate JavaInteractiveSemanticdb (version: Some(JdkVersion(17,0)), jdkHome: /usr/lib/jvm/java-17-openjdk-arm64, javac exists: false)
+2022.03.28 19:15:04 INFO  time: initialize in 1.68s
+2022.03.28 19:15:04 WARN  Build server is not auto-connectable.
+2022.03.28 19:15:04 WARN  no build tool detected in workspace '/home/ubuntu/Raisonians'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2022.03.28 19:17:11 INFO  shutting down Metals
