@@ -9,5 +9,6 @@ for c in string:
         op[-1][1] += 1
     else:
         op.append([c,1])
-        
-print(op)
+
+RLEstring = ''.join(str(''.join(str(ele) for ele in x)) for x in op)
+print(RLEstring + '\n')
