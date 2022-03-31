@@ -16,8 +16,6 @@ for [j,d,p] in job:
         output.append([j,d,p])
         i+=1
 
-
-
 summ=0
 for [a,b,c] in output:
     print(a+" : Deadline ="+str(b)+" : Profit ="+str(c))
