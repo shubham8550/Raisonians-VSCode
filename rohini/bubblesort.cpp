@@ -11,8 +11,8 @@ int main()
      {
          cin>>arr[i];
      }
-     int counter=0;
-     while(counter<n-1)
+     int counter=1;
+     while(counter<n)
      {
          for(int i=0; i<n-counter; i++)
          {
@@ -32,3 +32,4 @@ int main()
      }
      return 0;
 }
+
