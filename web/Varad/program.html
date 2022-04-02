@@ -3,35 +3,27 @@
         <title>MY Program</title>   
     <body>
     <script>
-            var a=20,b=10,i;
-            i =a+b;
-            a++;
-            document.write("The addition is", i); 
+            var a=30,b=10;
+            document.write("The addition is ", a+=b); 
             document.write("<br>")
-            document.write("The a is", a); 
+            document.write("The a is", a++); 
             document.write("<br>")
 
-            i =a-b;
-            b--;
-            document.write("The b is", b); 
+            document.write("The b is", b--); 
             document.write("<br>")
-            document.write("The division is", i); 
+            document.write("The division is",a-=b); 
             document.write("<br>")
 
-            i =a*b;
-            document.write("The multiplication is ", i); 
+            document.write("The multiplication is ", a*=b); 
             document.write("<br>")
 
-            i =a**b;
-            document.write("The Exponention is ", i); 
+            document.write("The Exponention is ", a**=b); 
             document.write("<br>")
 
-            i =a/b;
-            document.write("The division is ", i); 
+            document.write("The division is ", a/=b); 
             document.write("<br>")
 
-            i =a%b;
-            document.write("The Reminder is ", i); 
+            document.write("The Reminder is ", a%=b); 
             document.write("<br>")
             </script> 
     </body>
