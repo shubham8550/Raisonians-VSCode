@@ -14,23 +14,32 @@ int max(int a, int b)
 	else if (wt[items - 1] > Weight)
 		return knapSack(Weight, wt, values, items - 1);
 
-	else
-		return max
-        (
-			values[items - 1]
-				+ knapSack(Weight - wt[items - 1],
-						wt, values, items - 1),
-			knapSack(Weight, wt, values, items - 1)
+    else if(
+			return wt[items];
+	)
+	else{
+		return max  (
+			values[items - 1] 	+ knapSack(Weight - wt[items - 1], wt, values, items - 1),
+		    knapSack(Weight, wt, values, items - 1)
         );
+			return wt[items];
+
+
+	}
+	
+
+		
 }
 int main()
 {
-	int val[] = { 60, 100, 120 };
-	int wt[] = { 10, 20, 30 };
-	int W = 50;
+	int val[] = { 6,5,4 };
+	int wt[] = { 5,4,3};
+	int W = 7;
 	int n = 3;
 	printf("The profit for the knapsack is : \n");
 	printf("%d", knapSack(W, wt, val, n));
+
     printf("\n");
+	
 	return 0;
 }

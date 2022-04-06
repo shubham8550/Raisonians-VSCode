@@ -19,6 +19,10 @@
  }
  printf("Enter time quantum or time slice: \t");
  scanf("%d", &time_quantum);
+
+
+
+ 
  printf("\n Process ID\t\t  burst time\t turn around time\t waiting time\n");
  for(total = 0, i = 0; x != 0;)
  {

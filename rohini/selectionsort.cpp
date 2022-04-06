@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-
+//selection sort program
 int main()
 {
     int n; 
