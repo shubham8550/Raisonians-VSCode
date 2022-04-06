@@ -1,0 +1,23 @@
+  import socket
+import struct
+import binascii
+  def chksum(self, msg):
+        s = 0       # Binary Sum
+  
+        # loop taking 2 characters at a time
+        for i in range(0, len(msg), 2):
+            if (i+1) < len(msg):
+                a = ord(msg[i]) 
+                b = ord(msg[i+1])
+                s = s + (a+(b << 8))
+            elif (i+1)==len(msg):
+                s += ord(msg[i])
+            else:
+                raise "Something Wrong here"
+
+
+        # One's Complement
+        s = s + (s >> 16)
+        s = ~s & 0xffff
+
+        return s
