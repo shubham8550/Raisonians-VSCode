@@ -14,3 +14,10 @@ sudo apt-get install python3-numpy
 ```
 
 public.sbserver.ml
+
+
+
+```
+safe directory fix
+git config --global --add safe.directory /home/ubuntu/Raisonians
+```

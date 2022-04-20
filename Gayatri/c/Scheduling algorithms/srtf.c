@@ -1,28 +1,60 @@
-#include <stdio.h>
-int main(){
-    int at[10], bt[10], p[10], i, smallest, count=0, time, n;
-    int avg=0, tt=0, end;
-    printf("Enter the number of Processes:\n");
-    scanf("%d",&n); 
-    
-    for(i=0;i<n;i++){
-        printf("Enter Arrival Time and Burst Time for Process Process Number %d :",i+1);
-        scanf("%d",&at[i]);
-        scanf("%d",&bt[i]);
-        p[i] = bt[i];
-        // printf("%d %d", at[i], bt[i]);
+#include <stdio.h> 
+ 
+int main(){ 
+  int n, ari[10], bur[10], total = 0, i, j, small, temp, procs[100], k, waiting[10], finish[10]; 
+  float tavg = 0.0, wavg = 0.0; 
+  printf("ENTER THE NUMBER OF PROCESSES:"); 
+  scanf("%d", & n); 
+  
+  for (i = 0; i < n; i++){ 
+    printf("ENTER THE ARRIVAL TIME AND BURST TIME OF PROCESS %d:\t", i); 
+    scanf("%d", & ari[i]);  
+    scanf("%d", & bur[i]); 
+    waiting[i] = 0; 
+    total += bur[i]; 
+  } 
+ 
+  for (i = 0; i < n; i++){ 
+    for (j = i + 1; j < n; j++){ 
+      if (ari[i] > ari[j]){ 
+        temp = ari[i]; 
+        ari[i] = ari[j]; 
+        ari[j] = temp; 
+        temp = bur[i]; 
+        bur[i] = bur[j]; 
+        bur[j] = temp; 
+      } 
     }
-
-    for(time=0; count!=n; time++){
-        smallest = 100;
-        for(i=0;i<n;i++){
-            if(a[i]<=time && b[i]<b[smallest] && b[i]>0 ){
-                smallest=i;
-            }
-        }
-            
-            
-    }
-
-    
-}
+  } 
+ 
+  for (i = 0; i < total; i++){ 
+    small = 3200; 
+    for (j = 0; j < n; j++){ 
+      if ((bur[j] != 0) && (ari[j] <= i) && (bur[j] < small)){ 
+        small = bur[j]; 
+        k = j; 
+      } 
+    } 
+    bur[k]--; 
+    procs[i] = k; 
+  }
+ 
+  k = 0; 
+  for (i = 0; i < total; i++){ 
+    for (j = 0; j < n; j++){ 
+      if (procs[i] == j){ 
+        finish[j] = i; 
+        waiting[j]++; 
+      } 
+    } 
+  } 
+ 
+  printf("\n Process \t Brust Time \t Waiting Time \t TAT");
+  for (i = 0; i < n; i++){ 
+    printf("\n P[%d]\t\t %d\t\t %d\t\t %d", i + 1, finish[i] + 1, (((finish[i] + 1) - waiting[i]) - ari[i]), (finish[i] - ari[i]) + 1);
+    wavg = wavg + (((finish[i] + 1) - waiting[i]) - ari[i]); 
+    tavg = tavg + ((finish[i] - ari[i]) + 1); 
+  } 
+  printf("\n WAvG==>\t%f\n TAVG==>\t%f\n", (wavg / n), (tavg / n)); 
+  return 0; 
+} 

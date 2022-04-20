@@ -3,16 +3,20 @@
         <title>MY Program</title>   
     <body>
     <script>
-            var a=30,b=30;
-            if(a!=b){
-                document.write(true)
-            }
-            else
-            {
-                document.write(false)
-            }
-            
-            </script> 
+
+        var a ,b;
+       function Add(){
+                a = parseInt(prompt("Enter the First Number"))
+                b = parseInt(prompt("Enter the Second Number"))
+                c = a +b
+                document.write(c) 
+                 
+     }
+        Add()
+
+    </script> 
     </body>
+            <center><button onscroll="Add()">Addition</button></center>
+        
     </head>
 </html>
