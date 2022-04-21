@@ -125,10 +125,65 @@
 # nextele =alist[i+1]
 # i=i+1
 
-import random
-x=10
-y=50
-print(random.randrange(x,y))
+# import random
+# x=10
+# y=50
+# print(random.randrange(x,y))
 
+# fhr=open("data.txt","r")
+# line1=fhr.readline()    
+# print(line1,end="")
+# line2=fhr.readline()    
+# print(line2,end="")
+# line3=fhr.readline()    
+# # print(line3,end="")
+
+# FHW=open("data.txt","w")
+# FHW.write("written some thing")
+# print(FHW.tell())
+# print("closed?",FHW.closed)
+# FHW.close()
+# print("after closing the file closed?",FHW.closed)
+
+# set_1={1,2,3,1,2,4,5,3,4,8,9,7,10}
+# for index in range(len(set_1)):
+#     print(index,end=" ")
+
+# def value(num1):
+#     list1=[]
+#     while num1!=0:
+#         if num1%2==0:
+#             list1.append(num1)
+#         else:
+#             break
+#         num1-=2
+#     print(list1)
+# value(10) 
+ 
+#  def sample(value):
+#     sum1=0
+#     for i in value:
+#         if i%2!=0:
+#             sum1+=value[i]
+#         else:
+#             sum1-=i
+#     print(sum1)
+# dict1={1:2,2:4,3:6,5:8}
+# sample(dict1)
+
+import pygame as pg,sys
+from pygame.locals import *
+import time
+#initialize global variables
+XO = 'x'
+winner = None
+draw = False
+width = 400
+height = 400
+white = (255, 255, 255)
+line_color = (10,10,10)
+#TicTacToe 3x3 board
+TTT = [[None]*3,[None]*3,[None]*3]
+ 
 
 
