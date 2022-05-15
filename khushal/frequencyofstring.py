@@ -1,5 +1,4 @@
 strg = "HelloHHEELLOOBBOOYYSS!!"
-
 frqn = {}
 for i in strg:
     if i in frqn:
