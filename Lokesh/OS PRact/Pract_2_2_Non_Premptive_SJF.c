@@ -1,5 +1,4 @@
 //Non-Preemptive Shortest Job First
- 
 #include<stdio.h>
 int main()
 {
@@ -40,12 +39,12 @@ int main()
     }  
     avg_wt=(float)total/n;      
     total=0;
-    printf("\nProcess\tBurst Time\tWaiting Time Turnaround Time");
+    printf("\nProcess\tBurst Time\tWaiting Time\t Turnaround Time");
     for(i=0;i<n;i++)
     {
         tat[i]=bt[i]+wt[i];   
         total+=tat[i];
-        printf("\nP%d\t\t\t%d\t\t\t%d\t\t\t%d",p[i],bt[i],wt[i],tat[i]);
+        printf("\nP%d\t\t%d\t\t%d\t\t\t%d",p[i],bt[i],wt[i],tat[i]);
     }
     avg_tat=(float)total/n;    
     printf("\nAverage Waiting Time=%.2f",avg_wt);

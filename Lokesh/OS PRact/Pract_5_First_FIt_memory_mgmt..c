@@ -35,6 +35,7 @@ void main()
         else
             printf("Not allocated");
     }
+    printf("\n")
 }
  
 

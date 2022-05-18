@@ -33,13 +33,13 @@ int main()
             temp[(pageFaults - 1) % frames] = incomingStream[m];
         }
         printf("\n");
-        printf("%d\t\t\t",incomingStream[m]);
+        printf("%d\t\t",incomingStream[m]);
         for(n = 0; n < frames; n++)
         {
             if(temp[n] != -1)
-                printf(" %d\t\t\t", temp[n]);
+                printf(" %d\t\t", temp[n]);
             else
-                printf(" - \t\t\t");
+                printf(" - \t\t");
         }
     }
     printf("\nTotal Page Faults:\t%d\n", pageFaults);

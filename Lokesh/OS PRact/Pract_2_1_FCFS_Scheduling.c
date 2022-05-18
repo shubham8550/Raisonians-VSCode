@@ -23,12 +23,12 @@ int main()
             tat[i]=bt[i]+wt[i];
             avwt+=wt[i];
             avtat+=tat[i];
-            printf("\nP[%d]\t\t%d\t\t\t%d\t\t\t\t%d",i+1,bt[i],wt[i],tat[i]);
+            printf("\nP[%d]\t\t%d\t\t%d\t\t%d",i+1,bt[i],wt[i],tat[i]);
       }
       avwt/=i;
       avtat/=i;
       printf("\nAverage Waiting Time:%d",avwt);
       printf("\nAverage Turnaround Time:%d",avtat);
-return 0;
+      return 0;
 }
  
