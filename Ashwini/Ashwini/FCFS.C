@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-void findWaitingTime(int processes[], int n, int bt[], int wt[])
+void findWaitin gTime(int processes[], int n, int bt[], int wt[])
 {
 	wt[0] = 0;
 

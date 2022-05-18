@@ -5,15 +5,15 @@
 #include <string.h>
 #include <stdlib.h>
 
-#define PORT 8080
+#define PORT 5555
 
-int main(int argc,char const *argv[])
+int main(int argc,char const* argv[])
 {
   int sock=0,valread;
   struct sockaddr_in serv_addr;
-  char hello="Hello from client";
+  char *hello="Hello from client";
   char buffer[1024]={0};
-  if((sock=socket(AF_INET,SOCK_STREAM),0))<0)
+  if((sock= socket(AF_INET,SOCK_STREAM,0))<0)
   {
       printf("\n Socket creation error\n");
       return -1;
@@ -26,7 +26,7 @@ int main(int argc,char const *argv[])
       printf("\n Invalid address/ Address not supported\n");
       return -1;
   }
-  if(connet(sock,(struct sockaddr*)&serv_addr,sizeof(serv_addr))<0)
+  if(connect(sock,(struct sockaddr*)&serv_addr,sizeof(serv_addr))<0)
   {
       printf("\n Coonection Failed\n");
       return -1;
