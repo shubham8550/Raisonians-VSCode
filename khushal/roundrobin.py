@@ -19,4 +19,4 @@ print(avg_wt)
 #print("waiting time",waiting_time)
 
 #turn around time!
-tat=wt+bt
+#tat=wt+bt
