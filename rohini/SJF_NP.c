@@ -38,7 +38,7 @@ int main()
         for(j=0;j<i;j++)
         wt[i]+=bt[j];
         total+=wt[i];
-        total+=wt[i];
+        //total+=wt[i];
     }
     awt=(float)total/n;
     total=0;

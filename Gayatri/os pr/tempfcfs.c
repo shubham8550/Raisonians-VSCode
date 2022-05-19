@@ -17,8 +17,18 @@ int main(){
     }
 
     for(i=0; i<n; i++){
-        printf("wt[%d]: %d\n", i, wt[i]);
+        tat[i] = wt[i] + bt[i];
+        total_wat = total_wat + wt[i];
+        toatl_tat = toatl_tat + tat[i];
     }
+    avg_wt = total_wat/n;
+    avg_tat = toatl_tat/n;
+
+    printf("Proc \t BT \t WT \n");
+    for(i=0; i<n; i++){
+        printf("P%d\t %d\t %d\n", i+1, bt[i], wt[i]);
+    }
+    printf("Avgtat = %f\n Avgwt = %f\n", avg_tat, avg_wt);
   
     return 0;
 }
