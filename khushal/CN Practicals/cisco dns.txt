@@ -1,0 +1,14 @@
+open Cisco packet tracer
+1. select 3 pc & place them
+2. select switch
+3. selct server
+4.connect them
+5. open server dialog by clicking on it
+6.choose config tab enter dns server 192.168.10.1
+7. select desktop tab then choose ip configuration enter ip address 192.169.10.1
+8.then go to services select dns selct "on" eneter name for dns " " address 192.168.10.0 and click add
+9.click on pc go to ip config in desktop ip address 192.168.10.2 , then add dns for pc 192.168.10.1
+do for all 3 by changing 192.168.10.2,3,4
+10. select mail option in above tab and demonstrate. 
+
+
